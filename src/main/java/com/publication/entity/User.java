@@ -28,6 +28,10 @@ public class User {
 	    private Collection<Role> roles = new ArrayList<>();
 	    
 	    
+	    @OneToMany(mappedBy="user_publi",cascade=CascadeType.ALL )
+	    private List<Publication> publications = new ArrayList<>();
+	    
+	    
 	    
 
 }

@@ -24,11 +24,8 @@ public class Publication {
 	    private String description;
 	    private Date date;
 	    
+	   
 	    @ManyToOne(cascade= CascadeType.PERSIST)
 	    private User user_publi;
-	    
-	    
-	    @OneToMany(mappedBy="user_publi",cascade=CascadeType.ALL )
-	    private List<Publication> publications = new ArrayList<>();
 
 }
